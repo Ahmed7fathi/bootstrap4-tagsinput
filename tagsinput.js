@@ -8,7 +8,11 @@
 
   var defaultOptions = {
     tagClass: function(item) {
-      return 'badge badge-info';
+      const colors = ['info', 'success', 'dark', 'warning', 'danger', 'secondary', 'primary'];
+      let pick_random_color = colors[Math.floor(Math.random() * colors.length)];
+      let random_color = 'badge badge-' + pick_random_color;
+      console.log(random_color);
+      return random_color;
     },
     focusClass: 'focus',
     itemValue: function(item) {
